@@ -18,7 +18,7 @@ runs:
 
         sudo python3 -m pip install prefect
 
-        prefect backend server cloud
+        prefect backend cloud
         prefect auth login -t ${{ inputs.prefect-api-token }}
 
       shell: bash

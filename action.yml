@@ -1,5 +1,9 @@
 name: "prefect"
 description: "A suite of common tools for prefect"
+inputs:
+  prefect-api-token:
+    description: "API token for Prefect Cloud authentication"
+    required: true
 runs:
   using: "composite"
   steps:
@@ -15,6 +19,6 @@ runs:
         sudo python3 -m pip install prefect
 
         prefect backend server cloud
-        prefect auth login -t ${{ secrets.PREFECT_API_TOKEN }}
+        prefect auth login -t ${{ inputs.prefect-api-token }}
 
       shell: bash

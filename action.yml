@@ -16,7 +16,7 @@ runs:
           python3-dev \
           python3-setuptools
 
-        sudo python3 -m pip install prefect==1.2.2
+        sudo python3 -m pip install prefect==1.2.4
 
         prefect backend cloud
         prefect auth login --key ${{ inputs.prefect-api-key }}
